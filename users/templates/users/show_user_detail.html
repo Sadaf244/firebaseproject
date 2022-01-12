@@ -1,0 +1,45 @@
+{% extends 'users/base.html' %}
+
+{% load static %}
+{% block content %}
+<button type="button" style="color:red;position:relative;float:right;" onclick="location.href='{% url 'log' %}' "><i class="fas fa-sign-out-alt"></i></button>
+<form class="login100-form validate-form" action="/post_create/" method="post">
+    {% csrf_token %}
+    
+    <br/>
+    <span class="login100-form-title p-b-26">
+      Welcome
+    </span>
+    <span class="login100-form-title p-b-48">
+        <img class="rounded-circle" src="{{i}}" style="width: 50%;height: 50%;">
+   
+    </span>
+    <div class="wrap-input100 validate-input">
+        <span>Name:</span>
+        {{name}}
+    <span class="focus-input100" ></span>
+    
+  </div>
+  <div class="wrap-input100 validate-input">
+    <span>Address:</span>
+    {{address}}
+    <span class="focus-input100" ></span>
+   
+  </div>
+  <div class="wrap-input100 validate-input">
+    <span class="focus-input100" ></span>
+    <span>Date Of Birth:</span>
+    {{dob}}
+  </div>
+  
+  <div class="container-login100-form-btn">
+    <div class="wrap-login100-form-btn">
+        <div class="login100-form-bgbtn"></div>
+  
+    <button style="color:white;background-color:navy;" class="login100-form-btn" type="button" onclick="location.href='{% url 'profile_create' %}' ">Add Data</button>
+  </div>
+</div>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>TaskProject</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'users/css/util.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'users/css/main.css' %}" type="text/css">
+<!--===============================================================================================-->	
+  <body rel="icon" type="image/png" href="{% static 'users/images/favicon.ico' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+        
+        {% block content %}
+        
+        <div class="container">
+          {% if message %}
+          <script>
+              alert('{{ message }}');
+          </script>
+          {% endif %}
+        </div>
+        {% endblock content %}
+        
+        
+       
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script href="{% static 'users/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+<script href="{% static 'users/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+<script href="{% static 'users/vendor/bootstrap/js/popper.js' %}"></script>
+<script href="{% static 'users/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script href="{% static 'users/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+<script href="{% static 'users/vendor/daterangepicker/moment.min.js' %}"></script>
+<script href="{% static 'users/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+<script href="{% static 'users/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+<script href="{% static 'users/js/main.js' %}"></script>
+
+</body>
+</html>

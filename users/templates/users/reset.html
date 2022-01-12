@@ -1,0 +1,23 @@
+{% extends 'users/base.html' %}
+
+{% load static %}
+{% block content %}
+{%if msg%}
+    <script>
+        window.alert('{{msg}}');
+    </script>
+{% endif%}
+<form class="login100-form validate-form" action="/postReset/" method="POST">
+    {% csrf_token %}
+    <div class="wrap-input100 validate-input">
+    <input class="input100" type="email" name="email" id="email" placeholder="Enter Your email" required>
+    <span class="focus-input100" ></span>
+     </div>
+     <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+    <input style="color:white;background-color:navy;" class="login100-form-btn" type="submit" value="Send Reset Link">
+</div>
+</div>
+</form>
+{% endblock %}
